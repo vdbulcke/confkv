@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/vdbulcke/confkv/src/pb";
+
+
+service ConfKV {
+  rpc Get(GetMessage) returns (GetResponse) {}
+  
+}
+
+message GetMessage {
+  string bucket = 1;
+  string key = 2;
+  
+}
+
+message GetResponse { 
+  bytes value = 1;
+}
+
+

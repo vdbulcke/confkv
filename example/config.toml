@@ -7,7 +7,7 @@ dir = "./data/db"
 [bucket.example]
 ## one of "git" or "dir"
 source = "dir"
-local_dir = "./data/dir"
+local_dir = "./example/"
 
 
 [bucket."git-example"]
@@ -16,5 +16,7 @@ source = "git"
 local_dir = "./data/git"
 git_repo_url = "https://github.com/vdbulcke/confkv.git"
 git_username = "oauth2"
+git_relative_dir = "./example/config/"
 
-
+[scheduler]
+cron_tab = "0 * * * *"
