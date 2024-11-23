@@ -14,7 +14,7 @@ build-snapshot:
 
 
 release-snapshot: 
-	goreleaser release --clean  --snapshot 
+	goreleaser release --clean  --snapshot  --skip=sign
 
 
 lint: 
